@@ -1,0 +1,36 @@
+/* Hero full screen */
+.hero-section {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Animations */
+@keyframes popUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideRight {
+  0% { opacity: 0; transform: translateX(100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+.animate-pop-up { animation: popUp 1.2s ease-out forwards; }
+.animate-slide-right { animation: slideRight 1.2s ease-out forwards; }
+
+/* Navbar */
+.nav-link { color: #333; transition: color 0.3s; }
+.nav-link:hover { color: #2563eb; }
+
+/* Slider */
+.slide { min-height: 100vh; }
+.dot.active { background: #2563eb !important; }
+
+/* Services Card (future use) */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Back to top */
+#back-to-top { background: #2563eb; }
