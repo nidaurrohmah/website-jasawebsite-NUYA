@@ -3,160 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NUYA Studio - Solusi Website untuk UMKM</title>
-  <meta name="description" content="NUYA Studio adalah penyedia jasa pembuatan website untuk membantu UMKM Indonesia agar lebih dikenal dan berkembang." />
-  <meta name="keywords" content="NUYA Studio, Website UMKM, Jasa Website" />
-  <meta name="author" content="NUYA Studio" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="images/NUYA STUDIO - Copy.png" />
+  <title>Website Profesional</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Animasi tambahan untuk fade-up */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body class="font-sans pb-16 md:pb-0">
+<body class="font-sans text-gray-800">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <img src="images/NUYA STUDIO - Copy.png" alt="NUYA Studio" class="h-10 mr-2" />
-        <span class="text-2xl font-bold">NUYA <span class="text-blue-600">Studio</span></span>
-      </div>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">Tentang Kami</a>
+  <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <div class="container mx-auto flex items-center justify-between py-4 px-6">
+      <h1 class="text-2xl font-bold text-blue-600">BrandName</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="nav-link">Beranda</a>
+        <a href="#services" class="nav-link">Layanan</a>
+        <a href="#about" class="nav-link">Tentang</a>
         <a href="#contact" class="nav-link">Kontak</a>
-      </div>
-      <div class="md:hidden">
-        <button id="menu-btn"><i class="fas fa-bars text-2xl"></i></button>
-      </div>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+        ☰
+      </button>
     </div>
+
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
-      <a href="#home" class="block py-2 nav-link">Home</a>
-      <a href="#about" class="block py-2 nav-link">Tentang Kami</a>
-      <a href="#contact" class="block py-2 nav-link">Kontak</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow">
+      <a href="#home" class="block px-6 py-3 border-b nav-link">Beranda</a>
+      <a href="#services" class="block px-6 py-3 border-b nav-link">Layanan</a>
+      <a href="#about" class="block px-6 py-3 border-b nav-link">Tentang</a>
+      <a href="#contact" class="block px-6 py-3 nav-link">Kontak</a>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero Slider -->
-  <section id="home" class="hero-section relative overflow-hidden">
-    <div class="slides relative">
-
-      <!-- Slide 1 -->
-      <div class="slide active grid md:grid-cols-2 gap-8 items-center px-6 container mx-auto">
-        <div class="text-section text-white space-y-6">
-          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-            Solusi Website <br /> untuk <span class="text-blue-200">UMKM</span>
-          </h1>
-          <p class="text-xl md:text-2xl text-blue-100">
-            Website profesional, mudah digunakan, dan terjangkau untuk mendukung bisnis Anda.
-          </p>
-        </div>
-        <div class="image-section flex justify-center">
-          <img src="images/NUYA STUDIO - Copy.png" alt="NUYA Studio Hero" class="w-full max-w-lg" />
-        </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container mx-auto px-6 py-32 grid md:grid-cols-2 gap-8 items-center">
+      <div class="text-section text-white animate-pop-up">
+        <h2 class="text-4xl font-bold mb-4">Solusi Digital Terbaik untuk Bisnismu</h2>
+        <p class="mb-6 text-lg">Kami menghadirkan layanan kreatif dan inovatif untuk membantu bisnis Anda berkembang di era digital.</p>
+        <a href="#services" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-100 transition">Jelajahi Layanan</a>
       </div>
-
-      <!-- Slide 2 -->
-      <div class="slide hidden grid md:grid-cols-2 gap-8 items-center px-6 container mx-auto">
-        <div class="text-section text-white space-y-6">
-          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-            Because every brand <br /> deserves to <span class="text-blue-200">shine</span>
-          </h1>
-          <p class="text-xl md:text-2xl text-blue-100">Kami percaya setiap UMKM layak punya website profesional.</p>
-        </div>
-        <div class="image-section flex justify-center">
-          <img src="images/heroslide2.png" alt="NUYA Hero Slide 2" class="w-full max-w-lg" />
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="slide hidden grid md:grid-cols-2 gap-8 items-center px-6 container mx-auto">
-        <div class="text-section text-white space-y-6">
-          <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
-            From <span class="text-blue-200">YOU</span> to the world
-          </h1>
-          <p class="text-xl md:text-2xl text-blue-100">Make your own website dan bawa bisnis Anda ke pasar global.</p>
-        </div>
-        <div class="image-section flex justify-center">
-          <img src="images/heroslide3.png" alt="NUYA Hero Slide 3" class="w-full max-w-lg" />
-        </div>
+      <div class="image-section animate-slide-right">
+        <img src="img/hero-image.svg" alt="Hero" class="w-full max-w-md mx-auto">
       </div>
     </div>
-
-    <!-- Navigasi -->
-    <div class="nav-arrows absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-6 text-white text-3xl">
-      <span class="prev cursor-pointer">&#10094;</span>
-      <span class="next cursor-pointer">&#10095;</span>
-    </div>
-    <div class="dots absolute bottom-6 w-full flex justify-center space-x-2"></div>
   </section>
 
-  <!-- About + Visi Misi -->
-  <section id="about" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6 text-center">Tentang NUYA Studio</h2>
-      <p class="text-gray-700 max-w-3xl mx-auto text-center mb-10">
-        NUYA Studio hadir hadir khusus untuk membantu pelaku Usaha Mikro, Kecil, dan Menengah di Indonesia. Kami memahami bahwa banyak UMKM memiliki keterbatasan dalam hal teknologi, sehingga kami menawarkan solusi praktis berupa website yang mudah digunakan, tampil profesional, dan sesuai dengan karakter usaha. Dengan biaya yang terjangkau serta layanan yang ramah, ingin menjadi partner yang mendukung bisnis lokal agar lebih dikenal luas, menjangkau lebih banyak pelanggan, dan mampu bersaing di era digital.
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-50 text-center">
+    <h2 class="text-3xl font-bold mb-12 text-gray-800 fade-up">Layanan Kami</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
+      
+      <!-- Service Card 1 -->
+      <div class="service-card bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition transform duration-300 fade-up">
+        <img src="img/webdesign.svg" alt="Web Design" class="w-16 mx-auto mb-6">
+        <h3 class="text-xl font-semibold text-gray-700 mb-3">Desain Website</h3>
+        <p class="text-gray-600">Membuat desain website modern dan responsif untuk meningkatkan citra bisnis Anda.</p>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="service-card bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition transform duration-300 fade-up">
+        <img src="img/development.svg" alt="Development" class="w-16 mx-auto mb-6">
+        <h3 class="text-xl font-semibold text-gray-700 mb-3">Pengembangan Web</h3>
+        <p class="text-gray-600">Kami membangun website dengan performa cepat, tampilan elegan, dan mudah dikelola.</p>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="service-card bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition transform duration-300 fade-up">
+        <img src="img/content.svg" alt="Content Management" class="w-16 mx-auto mb-6">
+        <h3 class="text-xl font-semibold text-gray-700 mb-3">Manajemen Konten</h3>
+        <p class="text-gray-600">Mengelola dan memperbarui konten agar website Anda selalu relevan dan menarik.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 text-center">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="text-3xl font-bold mb-6">Tentang Kami</h2>
+      <p class="text-gray-600 leading-relaxed">
+        Kami adalah tim profesional yang berfokus pada pengembangan solusi digital untuk membantu bisnis dan individu membangun kehadiran online yang kuat, efektif, dan menarik.
       </p>
-      <div class="max-w-3xl mx-auto text-gray-700 text-left space-y-6">
-        <div>
-          <h3 class="font-bold text-xl text-blue-600 mb-2">VISI</h3>
-          <p>“Menjadi solusi utama dan terpercaya bagi UMKM Indonesia dalam menghadirkan identitas digital yang profesional, dengan tujuan mendukung pertumbuhan usaha, memperluas jangkauan pasar, serta meningkatkan daya saing melalui pemanfaatan teknologi online yang mudah, terjangkau, dan berkelanjutan.”</p>
-        </div>
-        <div>
-          <h3 class="font-bold text-xl text-blue-600 mb-2">MISI</h3>
-          <ul class="list-disc pl-6 space-y-2">
-            <li>Menyediakan layanan pembuatan website yang relevan dan sesuai kebutuhan setiap jenis UMKM, baik usaha kuliner, ritel, maupun jasa, dengan desain modern, fungsional, dan ramah pengguna.</li>
-            <li>Memberikan pelayanan cepat, ramah, dan personal, sehingga pelaku UMKM merasa terbantu dalam setiap langkah transformasi digital tanpa harus menghadapi kerumitan teknis.</li>
-            <li>Mendukung UMKM dalam memperluas pasar dan meningkatkan visibilitas bisnis melalui website yang terintegrasi dengan media sosial dan strategi pemasaran digital sederhana.</li>
-            <li>Menjadi mitra jangka panjang bagi UMKM dengan menyediakan pendampingan, edukasi, serta dukungan teknis agar website yang dibuat tidak hanya hadir, tetapi juga berkembang seiring perjalanan bisnis.</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 bg-gray-50 text-center">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-6">Kontak Kami</h2>
-      <p class="text-gray-600 mb-6">Hubungi kami untuk konsultasi gratis.</p>
-      <p class="font-bold">📧 Email: cs@nuyastudio.com</p>
-      <p class="font-bold">📞 Telp/WA: +62 123-456-789</p>
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100 text-center">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+      <p class="text-gray-600 mb-6">Kami siap membantu Anda mewujudkan ide menjadi kenyataan digital.</p>
+      <a href="mailto:info@brandname.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Kirim Email</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
-      <div>
-        <img src="images/NUYA STUDIO - Copy.png" alt="NUYA Studio" class="h-12 mb-4">
-        <p class="text-gray-400">NUYA Studio mendukung UMKM untuk lebih dikenal, menjangkau pelanggan, dan mampu bersaing di era digital.</p>
-      </div>
-      <div>
-        <h3 class="font-bold mb-3">NUYA Studio</h3>
-        <ul class="space-y-2 text-gray-400">
-          <li><a href="#about" class="hover:text-white">Tentang Kami</a></li>
-          <li><a href="#contact" class="hover:text-white">Kontak</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="font-bold mb-3">Hubungi Kami</h3>
-        <p class="text-gray-400">Email: cs@nuyastudio.com</p>
-        <p class="text-gray-400">WA: +62 +62 123-456-789</p>
-      </div>
-    </div>
-    <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500">
-      © 2025 NUYA Studio. All Rights Reserved.
-    </div>
+  <footer class="bg-blue-600 text-white py-6 text-center">
+    <p>© 2025 BrandName. All rights reserved.</p>
   </footer>
 
   <!-- Back to Top -->
-  <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition">
-    <img src="images/panahatas.png" alt="Back to Top" class="w-10 h-10" />
+  <button id="back-to-top" class="fixed bottom-5 right-5 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition">
+    ↑
   </button>
 
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <!-- Script -->
   <script src="script.js"></script>
+  <script>
+    // Fade-up animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
