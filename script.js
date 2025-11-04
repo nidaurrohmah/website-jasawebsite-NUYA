@@ -5,6 +5,7 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
+
 // Back to Top
 const backToTopBtn = document.getElementById("back-to-top");
 window.addEventListener("scroll", () => {
@@ -20,12 +21,14 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
 // Hero Slider
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
 const dotsContainer = document.querySelector(".dots");
+
 
 // Buat dots
 slides.forEach((_, i) => {
@@ -36,6 +39,7 @@ slides.forEach((_, i) => {
 });
 const dots = document.querySelectorAll(".dot");
 
+
 function showSlide(n) {
   slides.forEach((slide, i) => {
     slide.classList.add("hidden");
@@ -43,9 +47,11 @@ function showSlide(n) {
     dots[i].classList.add("opacity-50");
   });
 
+
   // munculkan slide
   const activeSlide = slides[n];
   activeSlide.classList.remove("hidden");
+
 
   // reset animasi
   const text = activeSlide.querySelector(".text-section");
@@ -57,8 +63,10 @@ function showSlide(n) {
   text.classList.add("animate-pop-up");
   img.classList.add("animate-slide-right");
 
+
   dots[n].classList.add("active", "opacity-100");
 }
+
 
 function nextSlide() {
   slideIndex = (slideIndex + 1) % slides.length;
@@ -71,6 +79,7 @@ function prevSlide() {
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
 dots.forEach((dot, i) => dot.addEventListener("click", () => { slideIndex = i; showSlide(i); }));
+
 
 // Auto Slide
 setInterval(nextSlide, 6000);
